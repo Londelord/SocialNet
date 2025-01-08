@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/7YuBsURq9E=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Application\\SocNetBack.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\londelord\\.nuget\\packages\\csharpfunctionalextensions\\3.4.3\\csharpfunctionalextensions.3.4.3.nupkg.sha512"
+  ],
+  "logs": []
+}

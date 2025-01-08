@@ -1,0 +1,15 @@
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\bin\Debug\net9.0\SocNetBack.Application.deps.json
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\bin\Debug\net9.0\SocNetBack.Application.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\bin\Debug\net9.0\SocNetBack.Application.pdb
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\bin\Debug\net9.0\SocNetBack.Domain.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\bin\Debug\net9.0\SocNetBack.Domain.pdb
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\SocNetBack.Application.csproj.AssemblyReference.cache
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\SocNetBack.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\SocNetBack.Application.AssemblyInfoInputs.cache
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\SocNetBack.Application.AssemblyInfo.cs
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\SocNetBack.Application.csproj.CoreCompileInputs.cache
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\SocNetBa.526A79A4.Up2Date
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\SocNetBack.Application.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\refint\SocNetBack.Application.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\SocNetBack.Application.pdb
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\ref\SocNetBack.Application.dll

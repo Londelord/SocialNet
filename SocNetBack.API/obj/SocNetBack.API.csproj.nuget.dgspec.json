@@ -1,0 +1,378 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.API\\SocNetBack.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.API\\SocNetBack.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.API\\SocNetBack.API.csproj",
+        "projectName": "SocNetBack.API",
+        "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.API\\SocNetBack.API.csproj",
+        "packagesPath": "C:\\Users\\londelord\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\londelord\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Application\\SocNetBack.Application.csproj": {
+                "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Application\\SocNetBack.Application.csproj"
+              },
+              "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Data\\SocNetBack.Data.csproj": {
+                "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Data\\SocNetBack.Data.csproj"
+              },
+              "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Domain\\SocNetBack.Domain.csproj": {
+                "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Domain\\SocNetBack.Domain.csproj"
+              },
+              "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Infrastructure\\SocNetBack.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Infrastructure\\SocNetBack.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[3.4.3, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Application\\SocNetBack.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Application\\SocNetBack.Application.csproj",
+        "projectName": "SocNetBack.Application",
+        "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Application\\SocNetBack.Application.csproj",
+        "packagesPath": "C:\\Users\\londelord\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\londelord\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Domain\\SocNetBack.Domain.csproj": {
+                "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Domain\\SocNetBack.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[3.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Data\\SocNetBack.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Data\\SocNetBack.Data.csproj",
+        "projectName": "SocNetBack.Data",
+        "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Data\\SocNetBack.Data.csproj",
+        "packagesPath": "C:\\Users\\londelord\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\londelord\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Domain\\SocNetBack.Domain.csproj": {
+                "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Domain\\SocNetBack.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[3.4.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Domain\\SocNetBack.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Domain\\SocNetBack.Domain.csproj",
+        "projectName": "SocNetBack.Domain",
+        "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Domain\\SocNetBack.Domain.csproj",
+        "packagesPath": "C:\\Users\\londelord\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\londelord\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[3.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Infrastructure\\SocNetBack.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Infrastructure\\SocNetBack.Infrastructure.csproj",
+        "projectName": "SocNetBack.Infrastructure",
+        "projectPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Infrastructure\\SocNetBack.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\londelord\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\londelord\\RiderProjects\\SocNetBack\\SocNetBack.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\londelord\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        }
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[3.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

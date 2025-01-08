@@ -1,0 +1,12 @@
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\bin\Debug\net9.0\SocNetBack.Domain.deps.json
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\bin\Debug\net9.0\SocNetBack.Domain.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\bin\Debug\net9.0\SocNetBack.Domain.pdb
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\SocNetBack.Domain.csproj.AssemblyReference.cache
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\SocNetBack.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\SocNetBack.Domain.AssemblyInfoInputs.cache
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\SocNetBack.Domain.AssemblyInfo.cs
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\SocNetBack.Domain.csproj.CoreCompileInputs.cache
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\SocNetBack.Domain.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\refint\SocNetBack.Domain.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\SocNetBack.Domain.pdb
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\ref\SocNetBack.Domain.dll
