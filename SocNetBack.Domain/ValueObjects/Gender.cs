@@ -8,7 +8,7 @@ public class Gender : ValueObject
     public static readonly Gender Female = new(nameof(Female));
     public static readonly Gender NotSpecified = new(nameof(NotSpecified));
 
-    private static readonly Gender[] _all = [Male, Female, NotSpecified];
+    private static readonly Gender[] Genders = [Male, Female, NotSpecified];
     
     public string Value { get; }
    
@@ -34,7 +34,7 @@ public class Gender : ValueObject
 
         var gender = value.Trim().ToLower();
         
-        if (_all.Any(g => g.Value.ToLower() == gender) == false)
+        if (Genders.Any(g => g.Value.ToLower() == gender) == false)
             return Result.Failure("Gender value is not valid.");
         
         return Result.Success();

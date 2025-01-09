@@ -21,7 +21,7 @@ public class SocNetDbContext(DbContextOptions<SocNetDbContext> options) : DbCont
     public DbSet<MediaType> MediaTypes => Set<MediaType>();
     public DbSet<Message> Messages => Set<Message>();
     public DbSet<MessageMedia> MessageMedia => Set<MessageMedia>();
-    public DbSet<Post> Posts => Set<Post>();
+    public DbSet<DbPost> Posts => Set<DbPost>();
     public DbSet<PostMedia> PostMedia => Set<PostMedia>();
     public DbSet<PostTagMapping> PostTagMappings => Set<PostTagMapping>();
     public DbSet<Status> Statuses => Set<Status>();

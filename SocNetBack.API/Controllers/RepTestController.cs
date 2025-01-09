@@ -19,6 +19,9 @@ public class RepTestController
     [HttpGet]
     public async Task<User?> GetUser(Guid userId)
     {
+        var g = _userService.Get(userId);
+        
+        
         return await _userService.Get(userId);
     }
 }

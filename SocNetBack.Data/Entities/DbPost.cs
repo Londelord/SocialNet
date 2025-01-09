@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 namespace SocNetBack.Domain.Models;
 
 [Table("posts")]
-public class Post
+public class DbPost
 {
-    public Post(Guid postId, Guid authorId, DateTimeOffset createdAt, DateTimeOffset? updatedAt,
+    public DbPost(Guid postId, Guid authorId, DateTimeOffset createdAt, DateTimeOffset? updatedAt,
         string? content, bool isCommunityPost, Guid? communityId)
     {
         PostId = postId;

@@ -38,6 +38,9 @@ public class User
     public DateTime CreatedAt { get; }
     public bool VerificationStatus { get; }
     
+    //TODO add Friendship Collection and Likes
+    //TODO add management methods
+    
     #region Validation constants
 
     public const int MIN_USERNAME_LENGTH = 5;

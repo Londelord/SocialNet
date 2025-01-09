@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SocNetBack.Domain.Models;
 
 namespace SocNetBack.API.Controllers;
 
@@ -18,6 +19,7 @@ public class MediaController : ControllerBase
     [HttpGet("download/{fileName}")]
     public IActionResult Download(string fileName)
     {
+        
         var filePath = Path.Combine(_env.WebRootPath, "Media", fileName);
         if (!System.IO.File.Exists(filePath))
         {
