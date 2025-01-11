@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace SocNetBack.Data.Entities;
@@ -8,48 +7,22 @@ namespace SocNetBack.Data.Entities;
 [PrimaryKey(nameof(UserId))]
 public class DbUser
 {
-    public DbUser(Guid userId, string username, string? email, string? phone, string firstName, 
-        string lastName, DateTime? birthDate, int genderId, string? profilePictureUrl, 
-        string? bio, string? country, string? city, DateTime createdAt, bool verificationStatus)
-    {
-        UserId = userId;
-        Username = username;
-        Email = email;
-        Phone = phone;
-        FirstName = firstName;
-        LastName = lastName;
-        BirthDate = birthDate;
-        GenderId = genderId;
-        ProfilePictureUrl = profilePictureUrl;
-        Bio = bio;
-        Country = country;
-        City = city;
-        CreatedAt = createdAt;
-        VerificationStatus = verificationStatus;
-    }
-
-
     [Column("user_id")]
     public Guid UserId { get; set; }
 
     [Column("user_name")]
-    [MaxLength(30)]
     public string Username { get; set; }
 
     [Column("email")]
-    [MaxLength(100)]
     public string? Email { get; set; }
 
     [Column("phone_number")]
-    [MaxLength(20)]
     public string? Phone { get; set; }
     
     [Column("first_name")]
-    [MaxLength(50)]
     public string FirstName { get; set; }
     
     [Column("last_name")]
-    [MaxLength(50)]
     public string LastName { get; set; }
 
     [Column("date_of_birth")]
@@ -62,15 +35,15 @@ public class DbUser
     public string? ProfilePictureUrl { get; set; }
     
     [Column("bio")]
-    [MaxLength(300)]
     public string? Bio { get; set; }
     
     [Column("country")]
-    [MaxLength(20)]
     public string? Country { get; set; }
+    
+    [Column("region")]
+    public string? Region { get; set; }
 
     [Column("city")]
-    [MaxLength(20)]
     public string? City { get; set; }
     
     [Column("date_created")]
@@ -78,4 +51,8 @@ public class DbUser
 
     [Column("verification_status")]
     public bool VerificationStatus { get; set; }
+    
+    public DbGender? Gender { get; set; }
+    public ICollection<DbFriend> Friends { get; set; } = new List<DbFriend>();
+    public ICollection<DbLike> Likes { get; set; } = new List<DbLike>();
 }

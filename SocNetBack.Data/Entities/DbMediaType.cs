@@ -1,21 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("mediaTypes")]
-public class MediaType
+[PrimaryKey(nameof(MediaTypeId))]
+public class DbMediaType
 {
-    public MediaType(int mediaTypeId, string mediaName)
-    {
-        MediaTypeId = mediaTypeId;
-        MediaName = mediaName;
-    }
-
     [Column("media_type_id")]
     public int MediaTypeId { get; set; }
     
     [Column("media_name")]
-    [MaxLength(20)]
     public string MediaName { get; set; }
 }

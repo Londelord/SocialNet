@@ -1,31 +1,21 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("usersSettings")]
-public class UserSettings
+[PrimaryKey(nameof(UserId))]
+public class DbUserSettings
 {
-    public UserSettings(Guid userId, JsonDocument privacyPreferences, string languagePreferences, 
-        JsonDocument notificationPreferences, JsonDocument appearancePreferences)
-    {
-        UserId = userId;
-        PrivacyPreferences = privacyPreferences;
-        LanguagePreferences = languagePreferences;
-        NotificationPreferences = notificationPreferences;
-        AppearancePreferences = appearancePreferences;
-    }
-
     [Column("user_id")]
-    [Key]
     public Guid UserId { get; set; }
     
     [Column("privacy_preferences")]
     public JsonDocument PrivacyPreferences { get; set; }
     
     [Column("language_preferences")]
-    [MaxLength(20)]
     public string LanguagePreferences { get; set; }
     
     [Column("notification_preferences")]

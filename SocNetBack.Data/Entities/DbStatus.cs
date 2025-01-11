@@ -1,21 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("statuses")]
-public class Status
+[PrimaryKey(nameof(StatusId))]
+public class DbStatus
 {
-    public Status(int statusId, string statusName)
-    {
-        StatusId = statusId;
-        StatusName = statusName;
-    }
-
     [Column("status_id")]
     public int StatusId { get; set; }
     
     [Column("status_name")]
-    [MaxLength(20)]
     public string StatusName { get; set; }
 }

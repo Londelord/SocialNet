@@ -57,3 +57,4 @@ C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\obj\Debug\net9.0\refi
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\obj\Debug\net9.0\SocNetBack.API.pdb
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\obj\Debug\net9.0\SocNetBack.API.genruntimeconfig.cache
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\obj\Debug\net9.0\ref\SocNetBack.API.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\obj\Debug\net9.0\SocNetBack.API.sourcelink.json

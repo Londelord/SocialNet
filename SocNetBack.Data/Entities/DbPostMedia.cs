@@ -2,21 +2,12 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("postsMedia")]
 [PrimaryKey(nameof(PostId), nameof(MediaId))]
-public class PostMedia
+public class DbPostMedia
 {
-    public PostMedia(Guid postId, Guid mediaId, int mediaTypeId, string mediaUrl, int positionInPost)
-    {
-        PostId = postId;
-        MediaId = mediaId;
-        MediaTypeId = mediaTypeId;
-        MediaUrl = mediaUrl;
-        PositionInPost = positionInPost;
-    }
-
     [Column("post_id")]
     public Guid PostId { get; set; }
     
@@ -30,6 +21,5 @@ public class PostMedia
     public string MediaUrl { get; set; }
     
     [Column("position_in_post")]
-    [Range(0, 9)]
     public int PositionInPost { get; set; }
 }

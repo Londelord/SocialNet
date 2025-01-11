@@ -6,8 +6,9 @@ namespace SocNetBack.Domain.Models;
 public class User
 {
     private User(Guid userId, string username, Email? email, Phone? phone, string firstName, 
-        string lastName, DateTime? birthDate, Gender gender, string? profilePictureUrl, 
-        string? bio, Address? address, DateTime createdAt, bool verificationStatus)
+        string lastName, DateTime? birthDate, Gender gender, ImageFile? profilePicture, 
+        string? bio, Address? address, DateTime createdAt, bool verificationStatus, 
+        List<Friendship> friendships, List<Like> likes)
     {
         UserId = userId;
         Username = username;
@@ -17,11 +18,13 @@ public class User
         LastName = lastName;
         BirthDate = birthDate;
         Gender = gender;
-        ProfilePictureUrl = profilePictureUrl;
+        ProfilePicture = profilePicture;
         Bio = bio;
         Address = address;
         CreatedAt = createdAt;
         VerificationStatus = verificationStatus;
+        _friendships = friendships;
+        _likes = likes;
     }
     
     public Guid UserId { get; }
@@ -32,13 +35,18 @@ public class User
     public string LastName { get; private set; }
     public DateTime? BirthDate { get; private set; }
     public Gender Gender { get; private set; }
-    public string? ProfilePictureUrl { get; }
+    public ImageFile? ProfilePicture { get; }
     public string? Bio { get; }
     public Address? Address { get; private set; }
     public DateTime CreatedAt { get; }
     public bool VerificationStatus { get; }
     
-    //TODO add Friendship Collection and Likes
+    private List<Friendship> _friendships = new();
+    public IReadOnlyCollection<Friendship> Friendships => _friendships;
+    
+    private List<Like> _likes = new();
+    public IReadOnlyCollection<Like> Likes => _likes;
+    
     //TODO add management methods
     
     #region Validation constants
@@ -50,27 +58,70 @@ public class User
     #endregion
 
      public static Result<User> Create(Guid userId, string username, Email? email, Phone? phone, string firstName,
-        string lastName, DateTime? birthDate, Gender gender, string? profilePictureUrl,
-        string? bio, Address? address, bool verificationStatus)
+        string lastName, DateTime? birthDate, Gender gender, ImageFile? profilePicture,
+        string? bio, Address? address, DateTime createdAt, bool verificationStatus, List<Friendship> friendships, List<Like> likes)
+     {
+         var validationResult = IsValid(userId, username, email, phone, birthDate, friendships, likes);
+         
+         if (validationResult.IsFailure)
+             return Result.Failure<User>(validationResult.Error);
+        
+        var user = new User(userId, username, email, phone, firstName, lastName, birthDate,
+            gender, profilePicture, bio, address, createdAt, verificationStatus, friendships, likes);
+        return Result.Success(user);
+    }
+
+    private static Result IsValid(Guid userId, string username, Email? email, Phone? phone, 
+        DateTime? birthDate, List<Friendship> friendships, List<Like> likes)
     {
         if (username.Length > MAX_USERNAME_LENGTH || username.Length < MIN_USERNAME_LENGTH) 
-            return Result.Failure<User>("Username must be between 5 and 30 characters");
+            return Result.Failure("Username must be between 5 and 30 characters");
         
         if (email is null && phone is null)
-            return Result.Failure<User>("Email or phone are required");
+            return Result.Failure("Email or phone are required");
         
         if (birthDate is not null && birthDate > DateTime.Today)
-            return Result.Failure<User>("Birth date cannot be in the future");
+            return Result.Failure("Birth date cannot be in the future");
 
-        var user = new User(userId, username, email, phone, firstName, lastName, birthDate,
-            gender, profilePictureUrl, bio, address, DateTime.Now, verificationStatus);
+        if (friendships.Any(friendship => friendship.UserId != userId))
+            return Result.Failure("Friendship does not belong to the user");
         
-        return Result.Success(user);
+        if (likes.Any(like => like.UserId != userId))
+            return Result.Failure("Like does not belong to the user");
+        
+        return Result.Success();
     }
 
     public Result ChangeEmail(Email email)
     {
         Email = email;
+        
+        return Result.Success();
+    }
+
+    public Result ChangePhone(Phone phone)
+    {
+        Phone = phone;
+        
+        return Result.Success();
+    }
+
+    public Result AddFriendship(Friendship friendship)
+    {
+        if (friendship.UserId != UserId)
+            return Result.Failure("Friendship does not belong to the user");
+        
+        _friendships.Add(friendship);
+        
+        return Result.Success();
+    }
+
+    public Result AddLike(Like like)
+    {
+        if (like.UserId != UserId)
+            return Result.Failure("Like does not belong to the user");
+        
+        _likes.Add(like);
         
         return Result.Success();
     }

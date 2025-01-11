@@ -1,22 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("activityLogs")]
-public class ActivityLog
+[PrimaryKey(nameof(LogId))]
+public class DbActivityLog
 {
-    public ActivityLog(Guid logId, Guid userId, int actionTypeId, string details, DateTimeOffset createdAt)
-    {
-        LogId = logId;
-        UserId = userId;
-        ActionTypeId = actionTypeId;
-        Details = details;
-        CreatedAt = createdAt;
-    }
-
     [Column("log_id")]
-    [Key]
     public Guid LogId { get; set; }
     
     [Column("user_id")]

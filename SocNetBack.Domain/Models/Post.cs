@@ -12,12 +12,20 @@ public class Post
     public DateTime? UpdatedAt { get; }
     public int LikesCount { get; private set; }
     public int ViewsCount { get; private set; }
-    public HashSet<Comment> Comments { get; }
     public bool IsCommunityPost { get; }
     public Guid? CommunityId { get; }
-    public HashSet<MediaFile> MediaFiles { get; }
-    public HashSet<Tag> Tags { get; }
-    public HashSet<Restriction> Restrictions { get; }
+
+    private List<Comment> _comments = new();
+    public IReadOnlyCollection<Comment> Comments => _comments;
+    
+    private List<MediaFile> _mediaFiles = new();
+    public IReadOnlyCollection<MediaFile> MediaFiles => _mediaFiles;
+    
+    private List<Tag> _tags = new();
+    public IReadOnlyCollection<Tag> Tags => _tags;
+    
+    private List<Restriction> _restrictions = new();
+    public IReadOnlyCollection<Restriction> Restrictions => _restrictions;
 
     //TODO - add IReadOnlyCollection
     //TODO - change HashSets
@@ -37,12 +45,12 @@ public class Post
         DateTime? updatedAt, 
         int likesCount, 
         int viewsCount, 
-        HashSet<Comment> comments, 
+        List<Comment> comments, 
         bool isCommunityPost, 
         Guid? communityId, 
-        HashSet<MediaFile> mediaFiles, 
-        HashSet<Tag> tags, 
-        HashSet<Restriction> restrictions)
+        List<MediaFile> mediaFiles, 
+        List<Tag> tags, 
+        List<Restriction> restrictions)
     {
         PostId = postId;
         AuthorId = authorId;
@@ -51,12 +59,12 @@ public class Post
         UpdatedAt = updatedAt;
         LikesCount = likesCount;
         ViewsCount = viewsCount;
-        Comments = comments;
+        _comments = comments;
         IsCommunityPost = isCommunityPost;
         CommunityId = communityId;
-        MediaFiles = mediaFiles;
-        Tags = tags;
-        Restrictions = restrictions;
+        _mediaFiles = mediaFiles;
+        _tags = tags;
+        _restrictions = restrictions;
     }
     
     public Result<Post> Create(Guid postId, 
@@ -66,12 +74,12 @@ public class Post
         DateTime? updatedAt, 
         int likesCount, 
         int viewsCount, 
-        HashSet<Comment> comments, 
+        List<Comment> comments, 
         bool isCommunityPost, 
         Guid? communityId, 
-        HashSet<MediaFile> mediaFiles, 
-        HashSet<Tag> tags, 
-        HashSet<Restriction> restrictions)
+        List<MediaFile> mediaFiles, 
+        List<Tag> tags, 
+        List<Restriction> restrictions)
     {
         var validationResult = IsValid(body, createdAt, updatedAt, likesCount, viewsCount, isCommunityPost,
             communityId, mediaFiles);
@@ -86,7 +94,7 @@ public class Post
     }
 
     private Result IsValid(string body, DateTime createdAt, DateTime? updatedAt, 
-        int likesCount, int viewsCount, bool isCommunityPost, Guid? communityId, HashSet<MediaFile> mediaFiles)
+        int likesCount, int viewsCount, bool isCommunityPost, Guid? communityId, List<MediaFile> mediaFiles)
     {
         if (string.IsNullOrWhiteSpace(body))
             return Result.Failure<Post>("Body is required");
@@ -122,5 +130,5 @@ public class Post
     
     public void AddView() => ViewsCount++;
     
-    public void AddComment(Comment comment) => Comments.Add(comment);
+    public void AddComment(Comment comment) => _comments.Add(comment);
 }

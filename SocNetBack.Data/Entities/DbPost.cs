@@ -2,25 +2,13 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("posts")]
+[PrimaryKey(nameof(PostId))]
 public class DbPost
 {
-    public DbPost(Guid postId, Guid authorId, DateTimeOffset createdAt, DateTimeOffset? updatedAt,
-        string? content, bool isCommunityPost, Guid? communityId)
-    {
-        PostId = postId;
-        AuthorId = authorId;
-        CreatedAt = createdAt;
-        UpdatedAt = updatedAt;
-        Content = content;
-        IsCommunityPost = isCommunityPost;
-        CommunityId = communityId;
-    }
-
     [Column("post_id")]
-    [Key]
     public Guid PostId { get; set; }
     
     [Column("author_id")]
@@ -33,7 +21,6 @@ public class DbPost
     public DateTimeOffset? UpdatedAt { get; set; }
     
     [Column("content")]
-    [MaxLength(15000)]
     public string? Content { get; set; }
     
     [Column("is_community_post")]

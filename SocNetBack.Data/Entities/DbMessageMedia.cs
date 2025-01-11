@@ -1,27 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("messageMedia")]
 [PrimaryKey(nameof(MessageId), nameof(MediaId))]
-public class MessageMedia
+public class DbMessageMedia
 {
-    public MessageMedia(Guid messageId, Guid mediaId, int mediaTypeId, string mediaUrl, int positionInMessage)
-    {
-        MessageId = messageId;
-        MediaId = mediaId;
-        MediaTypeId = mediaTypeId;
-        MediaUrl = mediaUrl;
-        PositionInMessage = positionInMessage;
-    }
-
     [Column("message_id")]
     public Guid MessageId { get; set; }
     
     [Column("media_id")]
     public Guid MediaId { get; set; }
-    
     
     [Column("media_type_id")]
     public int MediaTypeId { get; set; }

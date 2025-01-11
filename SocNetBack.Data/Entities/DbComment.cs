@@ -1,36 +1,23 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("comments")]
-public class Comment
+[PrimaryKey(nameof(CommentId))]
+public class DbComment
 {
-    public Comment(Guid commentId, Guid postId, Guid authorId, 
-        string content, DateTimeOffset createdAt, DateTimeOffset? updatedAt, 
-        bool isCommunityComment, Guid? communityId)
-    {
-        CommentId = commentId;
-        PostId = postId;
-        AuthorId = authorId;
-        Content = content;
-        CreatedAt = createdAt;
-        UpdatedAt = updatedAt;
-        IsCommunityComment = isCommunityComment;
-        CommunityId = communityId;
-    }
-
     [Column("comment_id")]
     public Guid CommentId { get; set; }
-    
     [Column("post_id")]
     public Guid PostId { get; set; }
+    
     
     [Column("author_id")]
     public Guid AuthorId { get; set; }
     
     [Column("content")]
-    [MaxLength(500)]
     public string Content { get; set; }
     
     [Column("created_at")]

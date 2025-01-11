@@ -1,23 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("chats")]
-public class Chat
+[PrimaryKey(nameof(ChatId))]
+public class DbChat
 {
-    public Chat(Guid chatId, bool isGroupChat, DateTime createdAt, string? title, string? description)
-    {
-        ChatId = chatId;
-        IsGroupChat = isGroupChat;
-        CreatedAt = createdAt;
-        Title = title;
-        Description = description;
-    }
-
-
     [Column("chat_id")]
-    [Key]
     public Guid ChatId { get; set; }
     
     [Column("is_group_chat")]
@@ -27,10 +18,8 @@ public class Chat
     public DateTime CreatedAt { get; set; }
     
     [Column("title")]
-    [MaxLength(100)]
     public string? Title { get; set; }
     
     [Column("description")]
-    [MaxLength(1000)]
     public string? Description { get; set; }
 }

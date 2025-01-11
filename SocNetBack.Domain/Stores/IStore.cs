@@ -2,6 +2,6 @@
 
 public interface IStore<TDomainModel, TDbEntity>
 {
-    TDomainModel MapToDomainModel(TDbEntity dbEntity);
-    TDbEntity MapToDbEntity(TDomainModel domainModel);
+    Task<TDomainModel> MapToDomainModel(TDbEntity dbEntity);
+    Task<TDbEntity> MapToDbEntity(TDomainModel domainModel);
 }

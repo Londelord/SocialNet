@@ -1,18 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
-[Table("likes")]
+[Table("views")]
 [PrimaryKey(nameof(UserId), nameof(PostId))]
-public class Like
+public class DbView
 {
-    public Like(Guid userId, Guid postId)
-    {
-        UserId = userId;
-        PostId = postId;
-    }
-
     [Column("user_id")]
     public Guid UserId { get; set; }
     

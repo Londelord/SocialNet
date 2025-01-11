@@ -1,19 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("communitySubscribers")]
 [PrimaryKey(nameof(CommunityId), nameof(UserId))]
-public class CommunitySubscriber
+public class DbCommunitySubscriber
 {
-    public CommunitySubscriber(Guid communityId, Guid userId, DateTimeOffset subscriptionDate)
-    {
-        CommunityId = communityId;
-        UserId = userId;
-        SubscriptionDate = subscriptionDate;
-    }
-
     [Column("community_id")]
     public Guid CommunityId { get; set; }
     

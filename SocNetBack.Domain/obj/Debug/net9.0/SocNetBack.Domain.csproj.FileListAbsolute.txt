@@ -10,3 +10,4 @@ C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\S
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\refint\SocNetBack.Domain.dll
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\SocNetBack.Domain.pdb
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\ref\SocNetBack.Domain.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Domain\obj\Debug\net9.0\SocNetBack.Domain.sourcelink.json

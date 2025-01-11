@@ -2,19 +2,12 @@
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("communityAdmins")]
 [PrimaryKey(nameof(CommunityId), nameof(AdminId))]
-public class CommunityAdmin
+public class DbCommunityAdmin
 {
-    public CommunityAdmin(Guid communityId, Guid adminId, JsonDocument permissions)
-    {
-        CommunityId = communityId;
-        AdminId = adminId;
-        Permissions = permissions;
-    }
-
     [Column("community_id")]
     public Guid CommunityId { get; set; }
     

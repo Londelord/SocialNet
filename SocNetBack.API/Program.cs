@@ -15,7 +15,8 @@ builder.Services.AddDbContext<SocNetDbContext>(
     options =>
     {
         options.UseNpgsql(builder.Configuration.GetConnectionString("Database"));
-    });
+    },
+    ServiceLifetime.Scoped);
 
 builder.Services.AddCors(options =>
 {

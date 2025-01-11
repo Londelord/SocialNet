@@ -1,20 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
-namespace SocNetBack.Domain.Models;
+namespace SocNetBack.Data.Entities;
 
 [Table("messages")]
-public class Message
+[PrimaryKey(nameof(MessageId))]
+public class DbMessage
 {
-    public Message(Guid messageId, Guid chatId, Guid senderId, string content, DateTimeOffset createdAt)
-    {
-        MessageId = messageId;
-        ChatId = chatId;
-        SenderId = senderId;
-        Content = content;
-        CreatedAt = createdAt;
-    }
-
     [Column("message_id")]
     public Guid MessageId { get; set; }
     
@@ -25,7 +18,6 @@ public class Message
     public Guid SenderId { get; set; }
     
     [Column("content")]
-    [MaxLength(1000)]
     public string Content { get; set; }
     
     [Column("created_at")]

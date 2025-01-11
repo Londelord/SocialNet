@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SocNetBack.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa949c747eb8a1be58be3e20097c894b23f28596")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e430b986cc5ac9a52fa895d2bdf1536603314b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("SocNetBack.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SocNetBack.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

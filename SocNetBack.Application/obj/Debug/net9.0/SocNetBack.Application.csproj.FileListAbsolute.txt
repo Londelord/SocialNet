@@ -13,3 +13,4 @@ C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\refint\SocNetBack.Application.dll
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\SocNetBack.Application.pdb
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\ref\SocNetBack.Application.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Application\obj\Debug\net9.0\SocNetBack.Application.sourcelink.json
