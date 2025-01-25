@@ -26,6 +26,7 @@ public class SocNetDbContext(DbContextOptions<SocNetDbContext> options) : DbCont
     public DbSet<DbStatus> Statuses => Set<DbStatus>();
     public DbSet<DbUserSettings> UserSettings => Set<DbUserSettings>();
     public DbSet<DbUserPassword> UserPasswords => Set<DbUserPassword>();
+    public DbSet<DbUserSession> UserSessions => Set<DbUserSession>();
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

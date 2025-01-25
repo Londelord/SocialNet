@@ -5,9 +5,7 @@ namespace SocNetBack.Domain.ValueObjects;
 public class Address : ValueObject
 {
     public string Country { get; }
-    
     public string Region { get; }
-    
     public string City { get; }
 
     private Address(string country, string region, string city)
@@ -43,6 +41,5 @@ public class Address : ValueObject
         yield return Country;
         yield return Region;
         yield return City;
-        
     }
 }

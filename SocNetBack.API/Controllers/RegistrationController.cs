@@ -2,8 +2,6 @@
 using SocNetBack.API.Contracts;
 using SocNetBack.Application.Commands;
 using SocNetBack.Application.Services;
-using SocNetBack.Domain.Models;
-using SocNetBack.Domain.ValueObjects;
 
 namespace SocNetBack.API.Controllers;
 
@@ -28,8 +26,7 @@ public class RegistrationController : ControllerBase
             request.Username,
             request.Email,
             request.Phone,
-            request.PasswordHash,
-            request.Salt,
+            request.Password,
             request.Birthday,
             request.Gender,
             request.Country,
@@ -37,7 +34,7 @@ public class RegistrationController : ControllerBase
             request.City
         );
 
-        var result = await _userService.CreateUser(command);
+        var result = await _userService.RegisterUser(command);
         
         if (result.IsFailure)
             return BadRequest(result.Error);
@@ -52,11 +49,10 @@ public class RegistrationController : ControllerBase
             return BadRequest("Data for validation is required");
         
         var result = await _userService.IsUserExist(email, username);
+        
+        if (result.IsFailure)
+            return BadRequest(result.Error);
+        
         return Ok();
-    }
-    
-    private string CreateUsername()
-    {
-        throw new NotImplementedException();
     }
 }

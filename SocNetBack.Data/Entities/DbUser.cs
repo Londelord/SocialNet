@@ -55,4 +55,5 @@ public class DbUser
     public DbGender? Gender { get; set; }
     public ICollection<DbFriend> Friends { get; set; } = new List<DbFriend>();
     public ICollection<DbLike> Likes { get; set; } = new List<DbLike>();
+    
 }

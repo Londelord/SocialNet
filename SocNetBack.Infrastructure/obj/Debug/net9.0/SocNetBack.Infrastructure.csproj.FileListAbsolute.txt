@@ -10,3 +10,9 @@ C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Infrastructure\obj\Debug\
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Infrastructure\obj\Debug\net9.0\refint\SocNetBack.Infrastructure.dll
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Infrastructure\obj\Debug\net9.0\SocNetBack.Infrastructure.pdb
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Infrastructure\obj\Debug\net9.0\ref\SocNetBack.Infrastructure.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Infrastructure\bin\Debug\net9.0\SocNetBack.Application.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Infrastructure\bin\Debug\net9.0\SocNetBack.Domain.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Infrastructure\bin\Debug\net9.0\SocNetBack.Application.pdb
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Infrastructure\bin\Debug\net9.0\SocNetBack.Domain.pdb
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Infrastructure\obj\Debug\net9.0\SocNetBack.Infrastructure.sourcelink.json
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.Infrastructure\obj\Debug\net9.0\SocNetBa.87974C1C.Up2Date

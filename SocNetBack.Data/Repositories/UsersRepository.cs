@@ -53,7 +53,6 @@ public class UsersRepository : IUserStore, IStore<User, DbUser>
                 Friendship.Create(dbFriend.UserId, dbFriend.FriendId, dbFriend.CreatedAt).Value)
             .ToList();
 
-
         var likes = dbUser.Likes
             .Select(dbLike => Like.Create(dbLike.UserId, dbLike.PostId, dbLike.CreatedAt).Value)
             .ToList();
@@ -79,11 +78,15 @@ public class UsersRepository : IUserStore, IStore<User, DbUser>
         return Task.FromResult(user);
     }
 
-    public async Task<Result> CreateUser(User user)
+    public async Task<Result> RegisterUser(User user, string hashedPassword)
     {
         var dbUser = await MapToDbEntity(user);
         
         await _dbContext.Users.AddAsync(dbUser);
+        await _dbContext.SaveChangesAsync();
+
+        var dbPasswordUser = new DbUserPassword { UserId = dbUser.UserId, PasswordHash = hashedPassword, Salt = "" };
+        await _dbContext.UserPasswords.AddAsync(dbPasswordUser);
         await _dbContext.SaveChangesAsync();
         
         return Result.Success();
@@ -91,17 +94,67 @@ public class UsersRepository : IUserStore, IStore<User, DbUser>
 
     public async Task<Result> IsUserExist(string? email, string? username)
     {
-        var dbUserEmail = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
-        
-        if (dbUserEmail != null)
-            return Result.Failure("User with this email already exists");
-        
-        var dbUserUsername = await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username);
-        if(dbUserUsername != null)
-            return Result.Failure("User with this username already exists");
+        if (email is not null)
+        {
+            var newEmailResult = Email.Create(email);
+            if (newEmailResult.IsFailure)
+                return Result.Failure(newEmailResult.Error);
+            
+            var dbUserEmail = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == newEmailResult.Value!.Value);
+            
+            if (dbUserEmail != null)
+                return Result.Failure("User with this email already exists");
+        }
+
+        if (username is not null)
+        {
+            var dbUserUsername = await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username);
+            if(dbUserUsername != null)
+                return Result.Failure("User with this username already exists");
+        }
         
         return Result.Success();
     }
+
+    public async Task<User?> GetByEmail(string email)
+    {
+        var dbUser = await _dbContext.Users
+            .Include(u => u.Gender)
+            .FirstOrDefaultAsync(u => u.Email == email);
+        if (dbUser == null)
+            return null;
+        return await MapToDomainModel(dbUser);
+    }
+
+    public async Task<string> GetPasswordHash(Guid? userId)
+    {
+        var dbUserPassword = await _dbContext.UserPasswords
+            .FirstOrDefaultAsync(u => u.UserId == userId);
+        
+        if (dbUserPassword is null)
+            throw new NullReferenceException("User not found");
+        
+        return dbUserPassword.PasswordHash;
+    }
+
+    public async Task<Result> WriteAccessToken(User user, string token)
+    {
+        var dbSession = new DbUserSession
+        {
+            SessionId = Guid.NewGuid(),
+            UserId = user.UserId,
+            AccessToken = token,
+            CreatedAt = DateTime.UtcNow,
+            ExpiresAt = DateTime.UtcNow.AddHours(12),
+            UserAgent = null,
+            IpAddress = null
+        };
+        
+        await _dbContext.UserSessions.AddAsync(dbSession);
+        await _dbContext.SaveChangesAsync();
+        return Result.Success();
+    }
+
 
     public async Task<DbUser> MapToDbEntity(User domainModel)
     {

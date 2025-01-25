@@ -58,3 +58,13 @@ C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\obj\Debug\net9.0\SocN
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\obj\Debug\net9.0\SocNetBack.API.genruntimeconfig.cache
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\obj\Debug\net9.0\ref\SocNetBack.API.dll
 C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\obj\Debug\net9.0\SocNetBack.API.sourcelink.json
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\londelord\RiderProjects\SocNetBack\SocNetBack.API\bin\Debug\net9.0\TestConfiguration.json

@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CSharpFunctionalExtensions;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
+using SocNetBack.API.Contracts;
 using SocNetBack.Application.Services;
 
 namespace SocNetBack.API.Controllers;
@@ -16,8 +19,12 @@ public class AuthenticationController : ControllerBase
     }
     
     [HttpPost]
-    public IActionResult Login([FromBody] Contracts.MyLoginRequest loginRequest, CancellationToken ct)
+    public async Task<IActionResult> Login([FromBody] LoginUserRequest loginUserRequest)
     {
-        throw new NotImplementedException();
+        var token = await _userService.Login(loginUserRequest.Email, loginUserRequest.Password);
+        
+        HttpContext.Response.Cookies.Append("fruity", token);
+        
+        return Ok();
     }
 }
